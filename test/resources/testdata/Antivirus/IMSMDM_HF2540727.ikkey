@@ -1,0 +1,12 @@
+-----BEGIN IKARUS SOFTWARE LICENSE-----
+product IMSMDM
+serialnumber HF2540727
+owner 7P Austria GmbH
+description IKARUS mobile.security for MDM
+startdate 2019-06-13
+enddate 2020-06-30
+features scanonaccessapp;scanonaccessfull;scanondemandapp;scanondemandfull;scanscheduledapp;scanscheduledfull;disablesigqa;sendinfectioncustom;urlfilterdatabase;urlfilterblacklist;urlfilterwhitelist;statistics
+-----SIGNATURE-----
+AUaYNpMLc5xX7gkKZPgnuypaQz/8stBHRtJbHhEkTWfiTjk8EIJKBgIvxaeKD17xxzB82D7JXyKcOt8VnxMex2Df
+Wkjo9xjlhbBfZsNHTx/AqmfnfLiWEdtwgYEM5n0Rmjl9reJcgZBxIpK9JaGYKPtnrDh3JgbNAGxJFRDZG8w=
+-----END IKARUS SOFTWARE LICENSE-----

@@ -1,0 +1,14 @@
+{
+    "editor.wordWrap": "on",
+    "eslint.workingDirectories": [
+        "./test"
+    ],
+    "cucumberautocomplete.steps": [
+        "./test/javascript/step-definition/**/*.spec.js"
+    ],
+    "cucumberautocomplete.strictGherkinCompletion": true,
+    "cucumberautocomplete.pages": {"./test/javascript/pageobjects/**/*.page.js"},
+    "cucumber-gotostep.srcPath": "./test/javascript/step-definition/**/*.spec.js",
+    "cucumberautocomplete.syncfeatures": "./test/resources/features/**/*.feature",
+    "gherkin-autocomplete.featuresPath": "./test/resources/features/**/*.feature",
+}

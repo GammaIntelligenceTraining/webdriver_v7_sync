@@ -1,0 +1,34 @@
+ {
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "${workspaceFolder}\\test\\javascript\\pageobjects\\Organization\\HieGroups.page.js"
+        }
+    ]
+} 
+{
+    "name": "WebdriverIO",
+    "type": "node",
+    "request": "launch",
+    "protocol": "inspector",
+    "address": "localhost",
+    "port": 5859,
+    "timeout": 20000,
+    "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/wdio",
+    "windows": {
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/wdio.cmd"
+    },
+    "cwd": "${workspaceRoot}",
+    "console": "integratedTerminal",
+    // This args config runs only the file that's open and displayed
+    // (e.g., a file in test/spec/):
+    "args": [
+        // "--spec", "webdriverio/features/find-blogs-with-theme.feature"
+    ]
+}

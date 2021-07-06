@@ -1,0 +1,14 @@
+<qa:environment xmlns:qa="urn:model.commons.qatools.yandex.ru">
+    <id>2a54c4d7-7d79-4615-b80d-ffc1107016a1</id>
+    <name>MDM Automation</name>
+    <parameter>
+        <name>Browser</name>
+        <key>my.properties.browser</key>
+        <value>Chrome</value>
+    </parameter>
+    <parameter>
+        <name>MDM Test</name>
+        <key>my.properties.url</key>
+        <value>https://browser-client.7p-group.com/latest/7p/frontend/</value>
+    </parameter>
+</qa:environment>  
