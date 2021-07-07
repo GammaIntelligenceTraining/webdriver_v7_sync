@@ -21,6 +21,13 @@ module.exports = class Page {
         // browser.pause(3000);
     }
 
+    openAdmin() {
+        browser.url('/admin');
+        browser.pause(3000);
+        // browser.windowHandleMaximize();
+        // browser.pause(3000);
+    }
+
     /**
      * Method to Login
      */

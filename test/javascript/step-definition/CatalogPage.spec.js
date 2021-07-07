@@ -8,6 +8,11 @@ Given(/^User is on Home page$/,()=>{
     homeobject.verifyCurrentPage();
 });
 
+Given(/^Admin is on Admin page$/,()=>{
+    homeobject.openAdmin(); 
+    //homeobject.verifyCurrentPage();
+});
+
 When(/^User clicks Catalog link$/,()=>{
     homeobject.navigateToCatalogPage();
 });
