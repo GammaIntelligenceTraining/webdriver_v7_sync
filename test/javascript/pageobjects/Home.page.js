@@ -6,6 +6,7 @@ const utilObj = require( '../helper/WaitActions')
 class HomePage extends Page {
 
     get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
+    get newsLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(2) > a'); }
 
   
     /**
@@ -54,6 +55,11 @@ class HomePage extends Page {
     navigateToCatalogPage() {
         utilObj.waitForDefaultTimeOut();
         this.catalogLink.click();
+    }
+
+    navigateToNewsPage() {
+        utilObj.waitForDefaultTimeOut();
+        this.newsLink.click();
     }
 
 }

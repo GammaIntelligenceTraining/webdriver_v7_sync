@@ -3,10 +3,9 @@ const allure = require('wdio-allure-reporter');
 const utilObj = require( '../helper/WaitActions')
 
 
-class CatalogPage extends Page {
+class NewsPage extends Page {
 
-    //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
-    get cart() { return $('#cart')};
+    get newsTitle() { return $('#hp > div.main > div.content.box > h3:nth-child(1) > strong > i')};
     
 
     /**
@@ -29,9 +28,9 @@ class CatalogPage extends Page {
         }
     }
 
-    verifyCatalogPage() {                
+    verifyNewsPage() {                
         //this.cart.isDisplayed()
-        if (this.cart.isDisplayed()) {
+        if (this.newsTitle.isDisplayed()) {
             allure.createStep('User is on catalog');
         }
         else {
@@ -45,4 +44,4 @@ class CatalogPage extends Page {
 
 }
 //module.exports = new HomePage();
-module.exports = new CatalogPage();
+module.exports = new NewsPage();

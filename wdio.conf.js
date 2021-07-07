@@ -5,8 +5,8 @@ const del = require('del');
 
 global.downloadDir = path.join(__dirname, 'tempDownload');
 global.dataDir = path.join(__dirname, './test/resources/testdata');
-global.username = 'admin';
-global.password = 'N3p1fwux';
+global.username = 'admin123';
+global.password = 'admin';
 var dt = new Date()
 global.postfix = dt.getMonth() + '-' + dt.getDate() + '_' + dt.getHours() + ':' + dt.getMinutes() + ':' + dt.getSeconds();
 global.tenant = '1_automation';
@@ -37,6 +37,7 @@ exports.config = {
 
         //'./test/resources/features/**/*.feature',     
         './test/resources/features/CatalogPage.feature', 
+        './test/resources/features/NewsPage.feature', 
         './test/resources/features/CatalogPageAdmin.feature',
     ],
     // Patterns to exclude.
@@ -83,7 +84,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 1,
         //
         //browserName: 'chrome',
         browserName: 'chrome',
