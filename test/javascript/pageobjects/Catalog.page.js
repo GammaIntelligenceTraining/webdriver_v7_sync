@@ -7,8 +7,18 @@ class CatalogPage extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
-    
-
+    get firstItemSelect() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
+    get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
+    get totalCart() {return $('#cart-total')};
+    get processOrderLink() {return $('#cart > div.content > div.checkout > a:nth-child(2)')};
+    get processAsGuestButton() {return $('#button-account')};
+    get firstName() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(4)')};
+    get lastName() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(9)')};
+    get email() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(14)')};
+    get phone() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(19)')};
+    get address() {return $('#payment-address > div.checkout-content > div.right > input:nth-child(11)')};
+    get city() {return $('#payment-address > div.checkout-content > div.right > input:nth-child(20)')};
+    get buttonGuest() {return $('#button-guest')};
     /**
      * Method to navigate to home page
      */
@@ -42,6 +52,57 @@ class CatalogPage extends Page {
            //allure.addDescription("open the server instance");
         }
     }
+
+    selectFirstItem()
+    {
+        //browser.pause(5000);
+        utilObj.waitForDefaultTimeOut(); 
+        this.firstItemSelect.click();
+    }
+
+    addItemToCart()
+
+    {
+        //browser.pause(5000);
+        utilObj.waitForDefaultTimeOut(); 
+        this.addToCartButton.click();
+    }
+
+    clickTotalCart()
+    {
+        utilObj.waitForDefaultTimeOut(); 
+        this.totalCart.click();
+    }
+     
+    processWithOrder()
+    {
+        utilObj.waitForDefaultTimeOut(); 
+        this.processOrderLink.click();
+    }
+
+    processAsGuest() {
+        utilObj.waitForDefaultTimeOut(); 
+        this.processAsGuestButton.click();
+        
+    }
+
+    fillTheGuestPersonalInfo() {
+        this.firstName.click();
+        this.firstName.setValue("Maksim")
+        this.lastName.click();
+        this.lastName.setValue("KKK");
+        this.email.click();
+        this.email.setValue("someemail@someemail.com");
+        this.phone.click();
+        this.phone.setValue("123455");
+        this.city.click();
+        this.city.setValue("tallinn");
+        this.address.setValue("tallinn 123434");
+        this.address.click();  
+        //this.buttonGuest.click();      
+        //browser.pause(1000);
+    }
+
 
 }
 //module.exports = new HomePage();

@@ -36,14 +36,14 @@ exports.config = {
     specs: [
 
         //'./test/resources/features/**/*.feature',     
+        './test/resources/features/CatalogBuyItemAsGuest.feature',
+    ],
+    // Patterns to exclude.
+    exclude: [
         './test/resources/features/CatalogPage.feature', 
         './test/resources/features/NewsPage.feature', 
         './test/resources/features/CatalogPageAdmin.feature',
         './test/resources/features/SolutionsPage.feature'
-    ],
-    // Patterns to exclude.
-    exclude: [
-        
         // 'path/to/excluded/files'
          /*Important!!! always exclude this part*/
                 
