@@ -7,6 +7,7 @@ class HomePage extends Page {
 
     get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
     get newsLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(2) > a'); }
+    get solutionsLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(4) > a'); }
 
   
     /**
@@ -60,6 +61,11 @@ class HomePage extends Page {
     navigateToNewsPage() {
         utilObj.waitForDefaultTimeOut();
         this.newsLink.click();
+    }
+
+    navigateToSolutionsPage() {
+        utilObj.waitForDefaultTimeOut();
+        this.solutionsLink.click();
     }
 
 }
