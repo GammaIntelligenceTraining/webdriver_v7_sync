@@ -32,12 +32,12 @@ class CatalogPage extends Page {
     verifyCatalogPage() {                
         //this.cart.isDisplayed()
         if (this.cart.isDisplayed()) {
-            allure.createStep('User is on catalog');
+            allure.createStep('User is on Catalog');
         }
         else {
            // super.dashboardLink.scroll();
            utilObj.waitForDefaultTimeOut(); 
-           throw "Something went wrong, User is not in catalog"
+           throw "Something went wrong, User is not in Catalog"
            //super.dashboardLink.click();
            //allure.addDescription("open the server instance");
         }
