@@ -38,6 +38,8 @@ exports.config = {
         //'./test/resources/features/**/*.feature',     
         './test/resources/features/CatalogPage.feature', 
         './test/resources/features/CatalogPageAdmin.feature',
+        './test/resources/features/NewsPage.feature',
+        './test/resources/features/SolutionsPage.feature'
     ],
     // Patterns to exclude.
     exclude: [

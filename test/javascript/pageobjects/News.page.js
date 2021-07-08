@@ -3,10 +3,10 @@ const allure = require('wdio-allure-reporter');
 const utilObj = require( '../helper/WaitActions')
 
 
-class CatalogPage extends Page {
+class NewsPage extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
-    get cart() { return $('#cart')};
+    get newsTitle() { return $("#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(2) > a")};
     /**
      * Method to verify visible menu links
      */
@@ -95,15 +95,15 @@ class CatalogPage extends Page {
         super.adminDivModel.waitForExist(30000);
     }
 
-    verifyCatalogPage() {                
-        //this.cart.isDisplayed()
-        if (this.cart.isDisplayed()) {
-            allure.createStep('User is on Catalog');
+    verifyNewsPage() {                
+        //this.NewPage.isDisplayed()
+        if (this.newsTitle.isDisplayed()) {
+            allure.createStep('User is on catalog');
         }
         else {
            // super.dashboardLink.scroll();
            utilObj.waitForDefaultTimeOut(); 
-           throw "Something went wrong, User is not in Catalog"
+           throw "Something went wrong, User is not in catalog"
            //super.dashboardLink.click();
            //allure.addDescription("open the server instance");
         }
@@ -111,4 +111,4 @@ class CatalogPage extends Page {
 
 }
 //module.exports = new HomePage();
-module.exports = new CatalogPage();
+module.exports = new NewsPage();
