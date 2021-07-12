@@ -1,3 +1,0 @@
-Backend version: 6.06.01
-DB schema version: 6.06.01
-Frontend build version: 6.06.01 (Mon, 05 Jul 2021 07:02:00 GMT)
