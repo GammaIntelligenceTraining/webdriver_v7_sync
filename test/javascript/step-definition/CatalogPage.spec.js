@@ -37,10 +37,11 @@ When(/^User selects Guest option$/,()=>{
     catalogobject.processAsGuest();
 });
 
-
-When(/^User enters the personal details as Guest$/,()=>{
-    catalogobject.fillTheGuestPersonalInfo();
+When(/^User enters the personal details (.+), (.+) as Guest $/,(firstname, lastname)=>{
+    catalogobject.fillTheGuestPersonalInfo(firstname, lastname);
 });
+
+
 
 When(/^User does not select delivery mode$/,()=>{
     catalogobject.verifyCatalogPage();

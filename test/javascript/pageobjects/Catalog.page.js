@@ -94,11 +94,11 @@ class CatalogPage extends Page {
         
     }
 
-    fillTheGuestPersonalInfo() {
+    fillTheGuestPersonalInfo(firstname, lastname) {
         this.firstName.click();
-        this.firstName.setValue("Maksim")
+        this.firstName.setValue(firstname)
         this.lastName.click();
-        this.lastName.setValue("KKK");
+        this.lastName.setValue(lastname);
         this.email.click();
         this.email.setValue("someemail@someemail.com");
         this.phone.click();
