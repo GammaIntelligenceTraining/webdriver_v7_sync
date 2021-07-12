@@ -1,6 +1,6 @@
 Feature: User buys item as a guest
   
-    Scenario outline: User buys item as a guest
+    Scenario Outline: User buys item as a guest
         Given User is on Home page
         When User clicks Catalog link
         And User selects first item
@@ -14,6 +14,9 @@ Feature: User buys item as a guest
         Examples:
             | Firstname | Lastname |
             | Jaan | Tamm |
+            | Maksim | Kolodijev |
+            | Jaak | Saar |
+            | Максим | Кириллица |
     
     
         

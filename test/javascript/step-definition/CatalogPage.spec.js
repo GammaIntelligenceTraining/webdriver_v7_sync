@@ -37,7 +37,7 @@ When(/^User selects Guest option$/,()=>{
     catalogobject.processAsGuest();
 });
 
-When(/^User enters the personal details (.+), (.+) as Guest $/,(firstname, lastname)=>{
+When(/^User enters the personal details (.+), (.+) as Guest$/,(firstname, lastname)=>{
     catalogobject.fillTheGuestPersonalInfo(firstname, lastname);
 });
 

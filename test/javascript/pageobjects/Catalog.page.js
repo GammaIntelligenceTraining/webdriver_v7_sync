@@ -102,6 +102,7 @@ class CatalogPage extends Page {
         this.email.click();
         this.email.setValue("someemail@someemail.com");
         this.phone.click();
+        browser.pause(10000);
         this.phone.setValue("123455");
         this.city.click();
         this.city.setValue("tallinn");
