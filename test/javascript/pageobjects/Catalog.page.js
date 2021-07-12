@@ -11,14 +11,21 @@ class CatalogPage extends Page {
     get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
     get totalCart() {return $('#cart-total')};
     get processOrderLink() {return $('#cart > div.content > div.checkout > a:nth-child(2)')};
+    get guestOption() {return $('#guest');}
     get processAsGuestButton() {return $('#button-account')};
     get firstName() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(4)')};
     get lastName() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(9)')};
     get email() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(14)')};
     get phone() {return $('#payment-address > div.checkout-content > div.left > input:nth-child(19)')};
-    get address() {return $('#payment-address > div.checkout-content > div.right > input:nth-child(11)')};
+    get address() {return $('#payment-address > div.checkout-content > div.right > input:nth-child(11)')}
+    get deliveryAddress() {return $('#payment-address > div.checkout-content > div.right > select:nth-child(35)')};
     get city() {return $('#payment-address > div.checkout-content > div.right > input:nth-child(20)')};
-    get buttonGuest() {return $('#button-guest')};
+    get buttonRegister() { return $('#button-register')};
+    get buttonGuest() { return $('#button-guest')};
+    get buttonDelivery() { return $('#button-shipping-method')};
+    get buttonPayment() { return $('#button-payment-method')};
+    get buttonConfirm() { return $('#button-confirm')};
+    
     /**
      * Method to navigate to home page
      */
@@ -82,6 +89,7 @@ class CatalogPage extends Page {
 
     processAsGuest() {
         utilObj.waitForDefaultTimeOut(); 
+        this.guestOption.click();
         this.processAsGuestButton.click();
         
     }
@@ -98,9 +106,18 @@ class CatalogPage extends Page {
         this.city.click();
         this.city.setValue("tallinn");
         this.address.setValue("tallinn 123434");
-        this.address.click();  
-        //this.buttonGuest.click();      
-        //browser.pause(1000);
+        this.address.click(); 
+        //TODO: Refactor this part
+        $("#payment-address > div.checkout-content > div.right > select:nth-child(35)").selectByIndex(2);
+        browser.pause(1000);
+        this.buttonGuest.click();
+        browser.pause(1000);
+        this.buttonDelivery.click();
+        browser.pause(1000);
+        this.buttonPayment.click();
+        browser.pause(1000);
+        this.buttonConfirm.click();      
+        browser.pause(1000);
     }
 
 
