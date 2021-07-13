@@ -7,6 +7,7 @@ class SolutionsPage extends Page {
 
     //get SolutionsLink() { return $('#hp > div.main > div.content.box > ul:nth-child(1) > li:nth-child(1) > p.more > a); }
     get SolutionsTitle() { return $('#SolutionsTatle')};
+    get galleryShowMoreButtonBlue() { return $('#hp > div.main > div.content.box > ul:nth-child(1) > li:nth-child(1) > p.more > a')};
     /**
      * Method to verify visible menu links
      */
@@ -96,9 +97,10 @@ class SolutionsPage extends Page {
     }
 
     verifySolutionsPage() {                
+        utilObj.waitForDefaultTimeOut();
         //this.Solutions.isDisplayed()
-        if (this.SolutionPage.isDisplayed()) {
-            allure.createStep('User is on Solution');
+        if (this.galleryShowMoreButtonBlue.isDisplayed()) {
+            allure.createStep('User is on Solution Page');
         }
         else {
            // super.dashboardLink.scroll();

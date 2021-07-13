@@ -3,6 +3,10 @@
 Currently this framework has been developed to run scripts on Chrome Browser and windows Platform
 To run the suite on different browser and platform changes in "wdio.conf.js" file will be required.
 
+## Important
+
+Please verify that package.json file with described dependencies presents in the project.
+
 ### Tech Stack
 
 * [Selenium Service] - This is a node based CLI library for launching Selenium with WebDrivers support.
