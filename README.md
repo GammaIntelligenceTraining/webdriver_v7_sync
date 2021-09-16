@@ -6,7 +6,7 @@ To run the suite on different browser and platform changes in "wdio.conf.js" fil
 ### Tech Stack
 
 * [Selenium Service] - This is a node based CLI library for launching Selenium with WebDrivers support.
-* [WebdriverIO](https://webdriver.io/) - It is the selenium webdriver api bindings for node.js, It has a very simple api which could be used to automate web & browser apps in a fast and scalable way. NB: from 01.04.2021 webdriver upgraded from v4 to v7. The details about upgrade from v4 to v7 available here: https://mdm.atlassian.net/wiki/spaces/MMS/pages/1556348940/Test+cases+update+from+webdriver+v4+to+v7
+* [WebdriverIO](https://webdriver.io/) - It is the selenium webdriver api bindings for node.js, It has a very simple api which could be used to automate web & browser apps in a fast and scalable way. 
 * [Javascript](https://developer.mozilla.org/bm/docs/Web/JavaScript) - JavaScript (JS) is a lightweight, interpreted or JIT compiled programming language with first-class functions. Most well-known as the scripting language for Web pages, many non-browser environments also use it, such as node.js and Apache CouchDB.
 * [Cucumber](https://cucumber.io/) - The popular BDD test framework which helps us write automated tests.
 * [Allure] (http://allure.qatools.ru/) - The Allure Reporter creates Allure test reports which is an HTML generated website with all necessary information to debug your test results and take a look on error screenshots.
