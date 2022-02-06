@@ -7,6 +7,14 @@ class CatalogPage extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
+    get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
+    /**
+     * Method to click first item
+     */
+    clickFirstItem() {
+        utilObj.waitForDefaultTimeOut()
+        this.firstItem.click();
+    }
     /**
      * Method to verify visible menu links
      */

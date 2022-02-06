@@ -12,6 +12,10 @@ When(/^User clicks Catalog link$/,()=>{
     homeobject.navigateToCatalogPage();
 });
 
+When(/^User clicks on Item link$/,()=>{
+    catalogobject.clickFirstItem();
+});
+
 Then(/^User moves to Catalog page$/,()=>{
     catalogobject.verifyCatalogPage();
 })
