@@ -9,6 +9,8 @@ class CatalogPage extends Page {
     get cart() { return $('#cart')};
     get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
     get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
+    get cartWithItem() { return $('#cart-total')};
+    get checkoutLink() { return $('#cart > div.content > div.checkout > a:nth-child(2)')};
     
     /**
      * Method to click first item
@@ -18,6 +20,17 @@ class CatalogPage extends Page {
         this.firstItem.click();
     }
 
+    clickOpenCartTotal() {
+        utilObj.waitForDefaultTimeOut();
+        this.cartWithItem.click();
+        utilObj.waitForDefaultTimeOut();
+        browser.pause(5000);
+    }
+
+  /*  verifyCheckoutLinkVisible() {
+     // utilObj.waitForDefaultTimeout();
+        this.checkoutLink.click();
+    } */
     /**
      * Method add to cart item
      */

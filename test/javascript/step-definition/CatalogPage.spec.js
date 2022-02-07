@@ -23,3 +23,6 @@ When(/^User clicks on Add to cart item button$/,()=>{
 Then(/^User moves to Catalog page$/,()=>{
     catalogobject.verifyCatalogPage();
 })
+Then(/^item should be added to the cart$/, ()=>{
+    catalogobject.clickOpenCartTotal();
+})

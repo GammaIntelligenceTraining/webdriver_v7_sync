@@ -36,7 +36,7 @@ exports.config = {
     specs: [
 
         //'./test/resources/features/**/*.feature',     
-        './test/resources/features/CatalogPage.feature', 
+        //'./test/resources/features/CatalogPage.feature', 
         './test/resources/features/AddToCart.feature',
     ],
     // Patterns to exclude.
