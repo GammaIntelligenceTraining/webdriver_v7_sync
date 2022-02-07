@@ -16,6 +16,10 @@ When(/^User clicks on Item link$/,()=>{
     catalogobject.clickFirstItem();
 });
 
+When(/^User clicks on Add to cart item button$/,()=>{
+    catalogobject.clickAddToCartButton();
+});
+
 Then(/^User moves to Catalog page$/,()=>{
     catalogobject.verifyCatalogPage();
 })

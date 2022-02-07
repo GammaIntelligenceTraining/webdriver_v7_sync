@@ -8,6 +8,8 @@ class CatalogPage extends Page {
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
     get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
+    get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
+    
     /**
      * Method to click first item
      */
@@ -15,6 +17,15 @@ class CatalogPage extends Page {
         utilObj.waitForDefaultTimeOut()
         this.firstItem.click();
     }
+
+    /**
+     * Method add to cart item
+     */
+     clickAddToCartButton() {
+        utilObj.waitForDefaultTimeOut();
+        this.addToCartButton.click();
+    }
+
     /**
      * Method to verify visible menu links
      */
