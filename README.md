@@ -15,7 +15,7 @@ To run the suite on different browser and platform changes in "wdio.conf.js" fil
 
 ### Pre-requisites
 
-1. NodeJS and npm installed globally in the system. (For webdriver v7 node 12.x should be used)
+1. NodeJS and npm installed globally in the system. (For webdriver v7 node 12.x should be used). NB! Please note that current solution is not working with node 16.x and 17.x. You need to downgrade the node version using nvm
 https://nodejs.org/en/download/
 
 2.  JAVA(JDK) installed in the system (Java 8).
