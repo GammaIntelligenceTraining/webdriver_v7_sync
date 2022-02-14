@@ -3,14 +3,11 @@ const allure = require('wdio-allure-reporter');
 const utilObj = require( '../helper/WaitActions')
 
 
-class CatalogPage extends Page {
+class AboutCompany extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
-    get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
-    get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
-    get cartWithItem() { return $('#cart-total')};
-    get checkoutLink() { return $('#cart > div.content > div.checkout > a:nth-child(2)')};
+    get aboutCompanyChapter() { return $('#hp > div.main > div.content.box > h3:nth-child(4) > strong > i')};
     
     /**
      * Method to click first item
@@ -24,8 +21,6 @@ class CatalogPage extends Page {
         utilObj.waitForDefaultTimeOut();
         this.cartWithItem.click();
         utilObj.waitForDefaultTimeOut();
-        browser.pause(1000);
-        this.checkoutLink.click();
         browser.pause(5000);
     }
 
@@ -128,11 +123,11 @@ class CatalogPage extends Page {
         super.adminNameClass.click();
         super.adminDivModel.waitForExist(30000);
     }
-
-    verifyCatalogPage() {
+    
+    verifyAboutCompanyPage() {
                 
-        if (this.cart.isDisplayed()) {
-            allure.createStep('User is on catalog');
+        if (this.aboutCompanyChapter.isDisplayed()) {
+            allure.createStep('User is on about company page');
         }
         else {
            // super.dashboardLink.scroll();
@@ -144,4 +139,4 @@ class CatalogPage extends Page {
 
 }
 //module.exports = new HomePage();
-module.exports = new CatalogPage();
+module.exports = new AboutCompany();

@@ -6,7 +6,7 @@ const utilObj = require( '../helper/WaitActions')
 class HomePage extends Page {
 
     get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
-
+    get firmastLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(1) > a'); }
   
     /**
      * Method to verofy if current page is dashboard else navigate to dashboard
@@ -54,6 +54,11 @@ class HomePage extends Page {
     navigateToCatalogPage() {
         utilObj.waitForDefaultTimeOut();
         this.catalogLink.click();
+    }
+
+    navigateToAboutPage() {
+        utilObj.waitForDefaultTimeOut();
+        this.firmastLink.click();
     }
 
 }

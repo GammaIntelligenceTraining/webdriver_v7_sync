@@ -3,44 +3,28 @@ const allure = require('wdio-allure-reporter');
 const utilObj = require( '../helper/WaitActions')
 
 
-class CatalogPage extends Page {
+class CheckoutPage extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
-    get firstItem() { return $('#content > table > tbody > tr:nth-child(4) > td:nth-child(1) > a > b')};
-    get addToCartButton() { return $('#content > div.product-list > div > div.right > div > input')};
-    get cartWithItem() { return $('#cart-total')};
-    get checkoutLink() { return $('#cart > div.content > div.checkout > a:nth-child(2)')};
+    get emailField() { return $('#login > input[type=text]:nth-child(5)')};
+    get passwordField() { return $('#login > input[type=password]:nth-child(10)')};
+    get loginButton() { return $('#button-login')};
     
-    /**
-     * Method to click first item
-     */
-    clickFirstItem() {
-        utilObj.waitForDefaultTimeOut()
-        this.firstItem.click();
-    }
-
-    clickOpenCartTotal() {
+    /*
+    Method to login
+    */
+    loginAsRegisteredUser() {
         utilObj.waitForDefaultTimeOut();
-        this.cartWithItem.click();
-        utilObj.waitForDefaultTimeOut();
-        browser.pause(1000);
-        this.checkoutLink.click();
-        browser.pause(5000);
+        this.emailField.click();
+        this.emailField.clearValue();
+        this.emailField.setValue('Daniel');
+        this.passwordField.click();
+        this.passwordField.clearValue();
+        this.passwordField.setValue('Daniel123');
+        this.loginButton.click();
+        browser.pause(3000);
     }
-
-  /*  verifyCheckoutLinkVisible() {
-     // utilObj.waitForDefaultTimeout();
-        this.checkoutLink.click();
-    } */
-    /**
-     * Method add to cart item
-     */
-     clickAddToCartButton() {
-        utilObj.waitForDefaultTimeOut();
-        this.addToCartButton.click();
-    }
-
     /**
      * Method to verify visible menu links
      */
@@ -144,4 +128,4 @@ class CatalogPage extends Page {
 
 }
 //module.exports = new HomePage();
-module.exports = new CatalogPage();
+module.exports = new CheckoutPage();

@@ -1,6 +1,7 @@
 const { Given, When, Then } = require('@cucumber/cucumber');
 const homeobject = require('../pageobjects/Home.page');
 const catalogobject = require('../pageobjects/Catalog.page');
+const checkoutobject = require('../pageobjects/Checkout.page');
 
 
 Given(/^User is on Home page$/,()=>{
@@ -24,5 +25,10 @@ Then(/^User moves to Catalog page$/,()=>{
     catalogobject.verifyCatalogPage();
 })
 Then(/^item should be added to the cart$/, ()=>{
-    catalogobject.clickOpenCartTotal();
+    catalogobject.clickOpenCartTotal();  
 })
+
+When(/^user credentials should be entered$/,()=>{
+    checkoutobject.loginAsRegisteredUser();
+});
+

@@ -12,7 +12,8 @@ Feature: Login-Module. Admin should be able to login
         And logout the user
         Examples:
             | Username | Password |
-            | admin    | N3p1fwux |    
+            | admin    | N3p1fwux | 
+            | admin123 | N3wux |   
 
     @English
     #Jira Issue :https://mdm.atlassian.net/browse/REVI-19
