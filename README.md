@@ -142,13 +142,22 @@ Also change the browser metadata information
 ## Possible command line sequence
 
 cd /c/
+
 ls
+
 mkdir WDIO
+
 cd WDIO
+
 git clone https://github.com/GammaIntelligenceTraining/webdriver_v7_sync.git
+
 ls
+
 cd webdriver_v7_sync/
+
 npm install
+
 npm test
+
 
 
