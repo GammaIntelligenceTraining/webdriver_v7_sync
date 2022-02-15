@@ -10,6 +10,37 @@ class CheckoutPage extends Page {
     get emailField() { return $('#login > input[type=text]:nth-child(5)')};
     get passwordField() { return $('#login > input[type=password]:nth-child(10)')};
     get loginButton() { return $('#button-login')};
+    get firstButtonContinue() { return $('#button-account')};
+    get buttonRegister() { return $('#button-register')};
+    get emailFieldRegistrationForm() { return $('#payment-address > div.checkout-content > div.left > input:nth-child(14)')};
+    get errorEmailAlreadyUsedMessage() { return $('#payment-address > div.checkout-content > div.warning')};
+
+
+    
+    /** 
+     * Method to click First Button Continue 
+     * */
+    clickContinueButtonOnFirstStep() {
+        utilObj.waitForDefaultTimeOut();
+        this.firstButtonContinue.click();
+    }
+
+    fillEmailFieldWithAlreadyUsedEmail() {
+        utilObj.waitForDefaultTimeOut();
+        this.emailFieldRegistrationForm.click();
+        this.emailFieldRegistrationForm.clearValue();
+        this.emailFieldRegistrationForm.setValue('maksim@sbe.ee');
+        utilObj.waitForDefaultTimeOut();
+        this.buttonRegister.click();
+    }
+
+    /* Method to verify email already used */
+    
+    verifyEmailAlreadyUsedMessage() {
+        utilObj.waitForDefaultTimeOut();
+        this.errorEmailAlreadyUsedMessage.isDisplayed();
+    }
+    
     
     /*
     Method to login
