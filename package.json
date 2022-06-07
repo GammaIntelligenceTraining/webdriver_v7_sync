@@ -39,7 +39,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "chai": "^4.3.4",
-    "chromedriver": "^97.0.4",
+    "chromedriver": "^101.0.0",
     "csv-load-sync": "^2.3.1",
     "cucumber": "^7.0.0-rc.0",
     "del": "^6.0.0",
