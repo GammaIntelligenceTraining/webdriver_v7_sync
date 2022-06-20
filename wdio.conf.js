@@ -37,10 +37,11 @@ exports.config = {
 
         //'./test/resources/features/**/*.feature',  
         //'./test/resources/features/Admin/*.feature',   
-        './test/resources/features/CatalogPage.feature', 
-        './test/resources/features/AddToCart.feature',
-        './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
-        './test/resources/features/CompanyContact.feature',
+        //'./test/resources/features/CatalogPage.feature', 
+        //'./test/resources/features/AddToCart.feature',
+        './test/resources/features/EmailValidation.feature',
+        //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
+        //'./test/resources/features/CompanyContact.feature',
         //'./test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
@@ -94,8 +95,10 @@ exports.config = {
         browserName: 'chrome',
         'goog:chromeOptions': {
 
+            //Please use this part if you want to execute tests in headless mode
             //args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1200,1100', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
-            args: ['--window-size=1024,768', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
+            //Please use this part if you want to execute tests in headless mode
+            args: ['--window-size=1920,1080', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
             prefs: {'download.default_directory': downloadDir,'safebrowsing.enabled': 'False'},
               
         },    
