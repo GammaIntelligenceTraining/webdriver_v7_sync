@@ -22,6 +22,14 @@ When(/^User enters not valid email$/,()=>{
     checkoutobject.fillEmailFieldWithNotValidEmail();
 });
 
+When(/^User enters valid email$/,()=>{
+    checkoutobject.fillEmailFieldWithValidEmail();
+});
+
+When(/^User enters not valid phone$/,()=>{
+    checkoutobject.fillPhoneFieldWithNotValidPhone();
+});
+
 
 Then(/^message about existing Email appears$/,()=>{
     checkoutobject.verifyEmailAlreadyUsedMessage();
@@ -30,5 +38,11 @@ Then(/^message about existing Email appears$/,()=>{
 Then(/^message about not valid email appears$/,()=>{
     checkoutobject.verifyNotValidEmailMessage();
 })
+
+Then(/^message about not valid phone appears$/,()=>{
+    checkoutobject.verifyNotValidPhoneMessage();
+})
+
+
 
 

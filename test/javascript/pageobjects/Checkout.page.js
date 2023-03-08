@@ -13,8 +13,10 @@ class CheckoutPage extends Page {
     get firstButtonContinue() { return $('#button-account')};
     get buttonRegister() { return $('#button-register')};
     get emailFieldRegistrationForm() { return $('#payment-address > div.checkout-content > div.left > input:nth-child(14)')};
+    get phoneFieldRegistrationForm() { return $('#payment-address > div.checkout-content > div.left > input:nth-child(21)')};
     get errorEmailAlreadyUsedMessage() { return $('#payment-address > div.checkout-content > div.warning')};
     get emailNotValidMessage() { return $('#payment-address > div.checkout-content > div.left > span.error')};
+    get phoneNotValidMessage() { return $('#payment-address > div.checkout-content > div.left > span:nth-child(23)')};
 
     //payment-address > div.checkout-content > div.left > span.error
     
@@ -44,6 +46,32 @@ class CheckoutPage extends Page {
         this.emailFieldRegistrationForm.click();
         this.emailFieldRegistrationForm.clearValue();
         this.emailFieldRegistrationForm.setValue('maksimgmail.com');
+        utilObj.waitForDefaultTimeOut();
+        this.buttonRegister.click();
+        browser.pause(5000);
+    }
+
+    /*
+    Method to fill email field with valid email (maksim@gmail.com)
+    */
+    fillEmailFieldWithValidEmail() {
+        utilObj.waitForDefaultTimeOut();
+        this.emailFieldRegistrationForm.click();
+        this.emailFieldRegistrationForm.clearValue();
+        this.emailFieldRegistrationForm.setValue('maksim@gmail.com');
+        utilObj.waitForDefaultTimeOut();
+        this.buttonRegister.click();
+        browser.pause(5000);
+    }
+
+    /*
+    Method to fill phone field with not valid phone (55)
+    */
+    fillPhoneFieldWithNotValidPhone() {
+        utilObj.waitForDefaultTimeOut();
+        this.phoneFieldRegistrationForm.click();
+        this.phoneFieldRegistrationForm.clearValue();
+        this.phoneFieldRegistrationForm.setValue('55');
         utilObj.waitForDefaultTimeOut();
         this.buttonRegister.click();
         browser.pause(5000);
@@ -176,6 +204,17 @@ class CheckoutPage extends Page {
 
     verifyNotValidEmailMessage() {
         if (this.emailNotValidMessage.isDisplayed()==true) 
+        {
+            utilObj.waitForDefaultTimeOut();
+        }
+        else
+        {
+            throw error
+        }
+    }
+    
+    verifyNotValidPhoneMessage() {
+        if (this.phoneNotValidMessage.isDisplayed()==true) 
         {
             utilObj.waitForDefaultTimeOut();
         }
