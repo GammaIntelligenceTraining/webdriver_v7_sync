@@ -37,12 +37,12 @@ exports.config = {
 
         //'./test/resources/features/**/*.feature',  
         //'./test/resources/features/Admin/*.feature',   
-        //'./test/resources/features/CatalogPage.feature', 
-        //'./test/resources/features/AddToCart.feature',
+        './test/resources/features/CatalogPage.feature', 
+        './test/resources/features/AddToCart.feature',
         './test/resources/features/EmailValidation.feature',
-        //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
-        //'./test/resources/features/CompanyContact.feature',
-        //'./test/resources/features/Login.feature',
+        './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
+        './test/resources/features/CompanyContact.feature',
+        './test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
     exclude: [
