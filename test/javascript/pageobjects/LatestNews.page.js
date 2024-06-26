@@ -3,12 +3,12 @@ const allure = require('wdio-allure-reporter');
 const utilObj = require( '../helper/WaitActions')
 
 
-class AboutCompany extends Page {
+class LatestNews extends Page {
 
     //get CatalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a""]'); }
     get cart() { return $('#cart')};
     get aboutCompanyChapter() { return $('#hp > div.main > div.content.box > h3:nth-child(4) > strong > i')};
-    get aboutCompanyChapter() { return $('#hp > div.main > div.content.box > h3:nth-child(4) > strong > i')};
+    get latestNewsChapter() { return $('#hp > div.main > div.content.box > h3:nth-child(4) > strong > i')};
     
     /**
      * Method to click first item
@@ -125,19 +125,6 @@ class AboutCompany extends Page {
         super.adminDivModel.waitForExist(30000);
     }
     
-    verifyAboutCompanyPage() {
-                
-        if (this.aboutCompanyChapter.isDisplayed()) {
-            allure.createStep('User is on about company page');
-        }
-        else {
-           // super.dashboardLink.scroll();
-           utilObj.waitForDefaultTimeOut(); 
-           //super.dashboardLink.click();
-           //allure.addDescription("open the server instance");
-        }
-    }
-
     verifyLatestNewsPage() {
                 
         if (this.latestNewsChapter.isDisplayed()) {
@@ -151,6 +138,8 @@ class AboutCompany extends Page {
         }
     }
 
+
+
 }
 //module.exports = new HomePage();
-module.exports = new AboutCompany();
+module.exports = new LatestNews();

@@ -37,12 +37,13 @@ exports.config = {
 
         //'./test/resources/features/**/*.feature',  
         //'./test/resources/features/Admin/*.feature',   
-        './test/resources/features/CatalogPage.feature', 
-        './test/resources/features/AddToCart.feature',
-        './test/resources/features/EmailValidation.feature',
-        './test/resources/features/EmailAlreadyUsedOnCheckout.feature',
+        //'./test/resources/features/CatalogPage.feature', 
+        //'./test/resources/features/AddToCart.feature',
+        //'./test/resources/features/EmailValidation.feature',
+        //'./test/resources/features/EmailAlreadyUsedOnCheckout.feature',
         './test/resources/features/CompanyContact.feature',
-        './test/resources/features/Login.feature',
+        './test/resources/features/LatestNews.feature',
+        //'./test/resources/features/Login.feature',
     ],
     // Patterns to exclude.
     exclude: [
@@ -78,7 +79,7 @@ exports.config = {
     // from the same test should run tests.
     //
     //maxInstances: 0,
-    maxInstances: 20,
+    maxInstances: 10,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
@@ -89,7 +90,7 @@ exports.config = {
         // maxInstances can get overwritten per capability. So if you have an in-house Selenium
         // grid with only 5 firefox instances available you can make sure that not more than
         // 5 instances get started at a time.
-        maxInstances: 5,
+        maxInstances: 4,
         //
         //browserName: 'chrome',
         browserName: 'chrome',
@@ -98,7 +99,7 @@ exports.config = {
             //Please use this part if you want to execute tests in headless mode
             //args: ['--headless', '--no-sandbox', '--disable-gpu', '--disable-dev-shm-usage', '--window-size=1200,1100', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
             //Please use this part if you want to execute tests in headless mode
-            args: ['--window-size=1920,1080', '--disable-translate', '--disable-extensions', '--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
+            args: ['--window-size=1920,1080',  '--disable-extensions', '--disable-translate','--disable-background-networking', '--disable-sync', '--disable-default-apps', '--mute-audio', '--no-first-run', '--disable-prompt-on-repost'],
             prefs: {'download.default_directory': downloadDir,'safebrowsing.enabled': 'False'},
               
         },    

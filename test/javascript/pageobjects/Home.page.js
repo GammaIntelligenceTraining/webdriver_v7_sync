@@ -7,6 +7,7 @@ class HomePage extends Page {
 
     get catalogLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(3) > a'); }
     get firmastLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(1) > a'); }
+    get aboutNewsLink() { return $('#hp > div.main > div.header.box > div.slogan > ul > li:nth-child(2) > a'); }
   
     /**
      * Method to verofy if current page is dashboard else navigate to dashboard
@@ -59,6 +60,11 @@ class HomePage extends Page {
     navigateToAboutPage() {
         utilObj.waitForDefaultTimeOut();
         this.firmastLink.click();
+    }
+
+    navigateToLatestNewsPage() {
+        utilObj.waitForDefaultTimeOut();
+        this.aboutNewsLink.click();
     }
 
 }
